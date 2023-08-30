@@ -2,8 +2,8 @@ from django.contrib import admin
 from .models import Author, Genre, Book, BookInstance
 
 
-admin.site.register(Genre)
 
+admin.site.register(Genre)
 
 # Define the admin class
 class AuthorAdmin(admin.ModelAdmin):

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-25 14:58+0700\n"
+"POT-Creation-Date: 2023-08-30 11:04+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,26 +22,50 @@ msgstr ""
 msgid "Enter a book genre (e.g.Science Fiction)"
 msgstr ""
 
-#: .\catalog\models.py:26
+#: .\catalog\models.py:23
 msgid "Enter a brief description of the book"
 msgstr ""
 
-#: .\catalog\models.py:28
+#: .\catalog\models.py:25
 msgid ""
 "13 Character <a href=\"https://www.isbn-international.org/content/what-isbn"
 "\">ISBN number</a>"
 msgstr ""
 
-#: .\catalog\models.py:30
+#: .\catalog\models.py:27
 msgid "Select a genre for this book"
 msgstr ""
 
-#: .\catalog\models.py:56
-msgid "Unique ID for this particular bookacross whole library"
+#: .\catalog\models.py:46
+msgid "Unique ID for this particular book across whole library"
 msgstr ""
 
-#: .\catalog\models.py:67
+#: .\catalog\models.py:50
+msgid "Maintenance"
+msgstr ""
+
+#: .\catalog\models.py:50
+msgid "On loan"
+msgstr ""
+
+#: .\catalog\models.py:50
+msgid "Available"
+msgstr ""
+
+#: .\catalog\models.py:50
+msgid "Reserved"
+msgstr ""
+
+#: .\catalog\models.py:52
 msgid "Book availability"
+msgstr ""
+
+#: .\catalog\models.py:72
+msgid "Died"
+msgstr ""
+
+#: .\catalog\models.py:79
+msgid "author-detail"
 msgstr ""
 
 #: .\catalog\templates\base_generic.html:5
@@ -49,6 +73,7 @@ msgid "Local Library"
 msgstr ""
 
 #: .\catalog\templates\base_generic.html:20
+#: .\catalog\templates\catalog\book_detail.html:9
 msgid "Language"
 msgstr ""
 
@@ -62,6 +87,97 @@ msgstr ""
 
 #: .\catalog\templates\base_generic.html:40
 msgid "All authors"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:42
+msgid "User"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:43
+msgid "My Borrowed"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:44
+msgid "Logout"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:46
+msgid "Login"
+msgstr ""
+
+#: .\catalog\templates\catalog\author_detail.html:5
+#: .\catalog\templates\catalog\book_detail.html:6
+msgid "Author"
+msgstr ""
+
+#: .\catalog\templates\catalog\author_detail.html:7
+msgid "Date of Birth"
+msgstr ""
+
+#: .\catalog\templates\catalog\author_detail.html:9
+msgid "Date of Death"
+msgstr ""
+
+#: .\catalog\templates\catalog\author_detail.html:12
+#: .\catalog\templates\index.html:13
+msgid "Books"
+msgstr ""
+
+#: .\catalog\templates\catalog\author_list.html:5
+msgid "Author List"
+msgstr ""
+
+#: .\catalog\templates\catalog\author_list.html:13
+msgid "There are no authors in the library."
+msgstr ""
+
+#: .\catalog\templates\catalog\book_detail.html:5
+msgid "Title"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_detail.html:7
+msgid "Summary"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_detail.html:8
+msgid "ISBN"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_detail.html:10
+msgid "Genre"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_detail.html:13
+#: .\catalog\templates\index.html:14
+msgid "Copies"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_detail.html:23
+msgid "Due to be returned"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_detail.html:25
+msgid "Imprint"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_detail.html:26
+msgid "Id"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_list.html:5
+msgid "Book List"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_list.html:15
+msgid "There are no books in the library."
+msgstr ""
+
+#: .\catalog\templates\catalog\bookinstance_list_borrowed_user.html:5
+msgid "Borrowed books"
+msgstr ""
+
+#: .\catalog\templates\catalog\bookinstance_list_borrowed_user.html:15
+msgid "There are no books borrowed."
 msgstr ""
 
 #: .\catalog\templates\index.html:5
@@ -84,20 +200,24 @@ msgstr ""
 msgid "The library has the following record counts:"
 msgstr ""
 
-#: .\catalog\templates\index.html:13
-msgid "Books"
-msgstr ""
-
-#: .\catalog\templates\index.html:14
-msgid "Copies"
-msgstr ""
-
 #: .\catalog\templates\index.html:15
 msgid "Copies available"
 msgstr ""
 
 #: .\catalog\templates\index.html:16
 msgid "Authors"
+msgstr ""
+
+#: .\catalog\templates\index.html:19
+msgid "You have visited this page:"
+msgstr ""
+
+#: .\catalog\templates\index.html:21
+msgid "time"
+msgstr ""
+
+#: .\catalog\templates\index.html:23
+msgid "times"
 msgstr ""
 
 #: .\env\Lib\site-packages\django\contrib\messages\apps.py:15
@@ -1307,10 +1427,76 @@ msgstr ""
 msgid "Connect, get help, or contribute"
 msgstr ""
 
+#: .\locallibrary\settings.py:118
+msgid "Vietnamese"
+msgstr ""
+
 #: .\locallibrary\settings.py:119
 msgid "English"
 msgstr ""
 
-#: .\locallibrary\settings.py:120
-msgid "Vietnamese"
+#: .\templates\registration\logged_out.html:5
+msgid "Logged out!"
+msgstr ""
+
+#: .\templates\registration\logged_out.html:6
+msgid "Click here to login again."
+msgstr ""
+
+#: .\templates\registration\login.html:6
+msgid "Your username and password didn't match. Please try again."
+msgstr ""
+
+#: .\templates\registration\login.html:10
+msgid ""
+"Your account doesn't have access to this page. To proceed, please login with "
+"an account that has access."
+msgstr ""
+
+#: .\templates\registration\login.html:12
+msgid "Please login to see this page."
+msgstr ""
+
+#: .\templates\registration\login.html:27
+msgid "login"
+msgstr ""
+
+#: .\templates\registration\login.html:33
+msgid "Lost password?"
+msgstr ""
+
+#: .\templates\registration\password_reset_confirm.html:6
+msgid "Please enter (and confirm) your new password."
+msgstr ""
+
+#: .\templates\registration\password_reset_confirm.html:11
+msgid "New password:"
+msgstr ""
+
+#: .\templates\registration\password_reset_confirm.html:15
+msgid "Confirm password:"
+msgstr ""
+
+#: .\templates\registration\password_reset_confirm.html:25
+msgid "Password reset failed"
+msgstr ""
+
+#: .\templates\registration\password_reset_confirm.html:26
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset."
+msgstr ""
+
+#: .\templates\registration\password_reset_done.html:5
+msgid ""
+"We've emailed you instructions for setting your password. If they haven't "
+"arrived in a few minutes, check your spam folder."
+msgstr ""
+
+#: .\templates\registration\password_reset_email.html:3
+msgid "Someone asked for password reset for email"
+msgstr ""
+
+#: .\templates\registration\password_reset_email.html:3
+msgid "Follow the link below:"
 msgstr ""
