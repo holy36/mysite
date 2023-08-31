@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-30 11:04+0700\n"
+"POT-Creation-Date: 2023-08-30 22:33+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\catalog\forms.py:7
+msgid "Enter a date between now and 4 weeks (default 3)."
+msgstr ""
+
+#: .\catalog\forms.py:13
+msgid "Invalid date - renewal in past"
+msgstr ""
+
+#: .\catalog\forms.py:17
+msgid "Invalid date - renewal more than 4 weeks ahead"
+msgstr ""
 
 #: .\catalog\models.py:12
 msgid "Enter a book genre (e.g.Science Fiction)"
@@ -42,31 +54,31 @@ msgstr "Chọn thể loại cho cuốn sách này"
 msgid "Unique ID for this particular book across whole library"
 msgstr "ID duy nhất cho cuốn sách cụ thể này trên toàn bộ thư viện"
 
-#: .\catalog\models.py:50
+#: .\catalog\models.py:51
 msgid "Maintenance"
 msgstr "Bảo trì"
 
-#: .\catalog\models.py:50
+#: .\catalog\models.py:51
 msgid "On loan"
 msgstr "Đang cho mượn"
 
-#: .\catalog\models.py:50
+#: .\catalog\models.py:51
 msgid "Available"
 msgstr "Có sẵn"
 
-#: .\catalog\models.py:50
+#: .\catalog\models.py:51
 msgid "Reserved"
 msgstr "Dành riêng"
 
-#: .\catalog\models.py:52
+#: .\catalog\models.py:53
 msgid "Book availability"
 msgstr "Sách có sẵn"
 
-#: .\catalog\models.py:72
+#: .\catalog\models.py:74
 msgid "Died"
 msgstr ""
 
-#: .\catalog\models.py:79
+#: .\catalog\models.py:81
 msgid "author-detail"
 msgstr ""
 
@@ -107,6 +119,19 @@ msgstr "Đăng xuất"
 msgid "Login"
 msgstr "Đăng nhập"
 
+#: .\catalog\templates\catalog\author_confirm_delete.html:5
+#, fuzzy
+#| msgid "Author"
+msgid "Delete Author"
+msgstr "Tác giả"
+
+#: .\catalog\templates\catalog\author_confirm_delete.html:6
+msgid "Are you sure you want to delete the author:"
+msgstr "Bạn có chắc muốn xóa tác giả"
+
+#: .\catalog\templates\catalog\author_confirm_delete.html:10
+msgid "Có, xóa"
+
 #: .\catalog\templates\catalog\author_detail.html:5
 #: .\catalog\templates\catalog\book_detail.html:6
 msgid "Author"
@@ -120,18 +145,40 @@ msgstr "Ngày sinh"
 msgid "Date of Death"
 msgstr "Ngày mất"
 
-#: .\catalog\templates\catalog\author_detail.html:12
+#: .\catalog\templates\catalog\author_detail.html:11
+msgid "Tiểu sử"
+msgstr ""
+
+#: .\catalog\templates\catalog\author_detail.html:14
 #: .\catalog\templates\index.html:13
 msgid "Books"
 msgstr "Sách"
+
+#: .\catalog\templates\catalog\author_form.html:10
+#: .\catalog\templates\catalog\book_renew_librarian.html:17
+msgid "Submit"
+msgstr "Nộp"
 
 #: .\catalog\templates\catalog\author_list.html:5
 msgid "Author List"
 msgstr "Danh sách tác giả"
 
-#: .\catalog\templates\catalog\author_list.html:13
+#: .\catalog\templates\catalog\author_list.html:11
+msgid "Update"
+msgstr "Nâng cấp"
+
+#: .\catalog\templates\catalog\author_list.html:12
+#: .\env\Lib\site-packages\django\forms\formsets.py:499
+msgid "Delete"
+msgstr "Xóa"
+
+#: .\catalog\templates\catalog\author_list.html:17
 msgid "There are no authors in the library."
 msgstr "Không có tác giả nào trong thư viện"
+
+#: .\catalog\templates\catalog\author_list.html:19
+msgid "Create"
+msgstr "Tạo"
 
 #: .\catalog\templates\catalog\book_detail.html:5
 msgid "Title"
@@ -174,11 +221,26 @@ msgstr "Danh sách Sách"
 msgid "There are no books in the library."
 msgstr "Không có tác giả nào trong thư viện"
 
+#: .\catalog\templates\catalog\book_renew_librarian.html:5
+#: .\catalog\templates\catalog\bookinstance_list_borrowed_user.html:11
+msgid "Renew"
+msgstr "Làm mới"
+
+#: .\catalog\templates\catalog\book_renew_librarian.html:6
+#, fuzzy
+#| msgid "My Borrowed"
+msgid "Borrower"
+msgstr "Sách mượn của tôi"
+
+#: .\catalog\templates\catalog\book_renew_librarian.html:9
+msgid "Due date"
+msgstr "Ngày đáo hạn"
+
 #: .\catalog\templates\catalog\bookinstance_list_borrowed_user.html:5
 msgid "Borrowed books"
 msgstr "Sách đã mượn"
 
-#: .\catalog\templates\catalog\bookinstance_list_borrowed_user.html:15
+#: .\catalog\templates\catalog\bookinstance_list_borrowed_user.html:16
 msgid "There are no books borrowed."
 msgstr "Không có sách nào trong thư viện"
 
@@ -192,7 +254,7 @@ msgstr "Chào mừng bạn đến với LocalLibrary, một trang web được p
 
 #: .\catalog\templates\index.html:8
 msgid "Mozilla Developer Network"
-msgstr "Lê Huy"
+msgstr "Quang Liu"
 
 #: .\catalog\templates\index.html:10
 msgid "Dynamic content"
@@ -787,10 +849,6 @@ msgstr[0] ""
 #: .\env\Lib\site-packages\django\forms\formsets.py:484
 #: .\env\Lib\site-packages\django\forms\formsets.py:491
 msgid "Order"
-msgstr ""
-
-#: .\env\Lib\site-packages\django\forms\formsets.py:499
-msgid "Delete"
 msgstr ""
 
 #: .\env\Lib\site-packages\django\forms\models.py:886
